@@ -1,22 +1,17 @@
 const express = require('express');
 
 const app = express();
+const PORT = 3000;
+const scoundrelRouter = require('./routes/vanilla');
 
+// Basic Hello world view
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('Hello World!');
 });
 
-app.post('/submit-form', (req, res) => {
-    res.send('Form submitted');
-});
+// If the user is at /scoundrel, send them view from routes/vanilla.js
+app.use('/scoundrel', scoundrelRouter);
 
-app.use((req, res, next) => {
-    console.log(`${req.method} request for ${req.url}`);
-    next();
-});
-
-const port = 3000;
-
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
 });
