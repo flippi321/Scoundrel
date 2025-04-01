@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 const PORT = 3000;
-const scoundrelRouter = require('./routes/vanilla');
+const scoundrelRouter = require('./routes/vanillaScoundrel');
 
 // Basic Hello world view
 app.get('/', (req, res) => {
