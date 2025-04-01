@@ -1,0 +1,14 @@
+{
+  "name": "scoundrel",
+  "version": "1.0.0",
+  "description": "A node project inspired by the card game Scoundrel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christoffer Brevik",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
